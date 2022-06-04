@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -50,13 +51,13 @@ namespace Collapse.Blocks {
         /**
          * Trigger the block
          */
-        public virtual void Triger(float delay) {
+        public virtual void Trigger(float delay) {
             if (IsTriggered) return;
             IsTriggered = true;
-            
+
             // Clear from board
             BoardManager.Instance.ClearBlockFromGrid(this);
-            
+
             // Kill game object
             transform.DOKill();
             Destroy(gameObject);
