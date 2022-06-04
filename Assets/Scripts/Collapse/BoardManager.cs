@@ -45,7 +45,6 @@ namespace Collapse {
         private void Start() {
             // Fill board on start
             ScheduleRegenerateBoard();
-            Debug.Log("Remove me for bonus points!");
         }
 
         /**
